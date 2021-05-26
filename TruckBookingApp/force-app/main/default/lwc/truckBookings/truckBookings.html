@@ -1,0 +1,6 @@
+<template>
+    <h1 class="head">Active Bookings</h1>
+    <template for:each={bookings.data} for:item="booking" >
+        <c-booking key={booking.Id} booking={booking} cust=true></c-booking>
+    </template>
+</template>

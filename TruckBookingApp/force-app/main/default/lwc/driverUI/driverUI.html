@@ -1,0 +1,9 @@
+<template>
+    <h1 class="head">Bookings Assigned to Driver</h1>
+    <template for:each={bookings.data} for:item="booking" >
+        <div key={booking.Id} style="margin-bottom:20px;">
+            <c-bookingdriver booking={booking}></c-bookingdriver>
+            <c-load-info bkid={booking.Id}></c-load-info>
+        </div>
+    </template>
+</template>

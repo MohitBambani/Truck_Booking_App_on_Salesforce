@@ -1,0 +1,35 @@
+<template>
+    <h1 style="font-size:30px;">Make your booking...</h1>
+    <lightning-record-edit-form object-api-name="Truck_Booking__c" onsuccess={successEvent} onerror={errorEvent}>
+
+            
+                <lightning-input-field field-name="Customer_Name__c">
+                </lightning-input-field>
+          
+                <lightning-input-field field-name="Your_Truck__c"
+                                        value={truck}></lightning-input-field>
+                <lightning-input-field field-name="Pickup_Date__c">
+                                        </lightning-input-field>
+            
+                <lightning-input-field field-name="Pickup_Location__c">
+                </lightning-input-field>
+                <lightning-input-field field-name="Pickup_City__c">
+                </lightning-input-field>
+                <lightning-input-field field-name="Pickup_Address__c">
+                </lightning-input-field>
+                <lightning-input-field field-name="Drop_Location__c">
+                </lightning-input-field>
+            
+                
+                <lightning-input-field field-name="Destination_City__c">
+                </lightning-input-field>
+            
+                
+                <lightning-input-field field-name="Destination_Address__c">
+                </lightning-input-field>
+            
+                <lightning-button type="submit"
+                     label="Create new">
+                </lightning-button>
+    </lightning-record-edit-form>
+</template>

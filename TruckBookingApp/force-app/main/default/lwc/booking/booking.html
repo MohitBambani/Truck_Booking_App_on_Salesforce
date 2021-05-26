@@ -1,0 +1,18 @@
+<template >
+        <template if:true={cust}>
+            <template if:true={caseVisible}>
+                <lightning-card title="Raise a Case" icon-name="standard:default">
+                    <lightning-textarea onchange={changeVal} label="Describe your Problem with Booking" placeholder="Type your problem here"></lightning-textarea>
+                    <lightning-button label="Submit" onclick={createBookingCase}></lightning-button>
+                </lightning-card>
+            </template>
+        </template>
+        
+        <lightning-card title={booking.Name} icon-name="standard:default">
+            <lightning-button slot="actions" label="Raise a Case" onclick={docase}></lightning-button>
+            <lightning-record-form columns="2" record-id={booking.Id} 
+            object-api-name="Truck_Booking__c" fields={fields} mode={recordmode}>
+            </lightning-record-form>
+        </lightning-card>
+    
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-tile label={truck.Name} class='child_ui' onclick={handleClickEvent}>
+        <template if:true={availableOrNot}>
+            <p><span class="spanColorGreen">{truck.Availability_Status__c}</span></p>
+        </template>
+        <template if:false={availableOrNot}>
+            <p><span class="spanColorRed">{truck.Availability_Status__c}</span></p>
+        </template>
+        <img src={truck.Truck_Image__c} />
+        <p>Fixed Charge : {truck.Fixed_Charge__c}</p>
+        <p>Load Capacity : {truck.Maximum_Load_Capacity__c}</p>
+    </lightning-tile>
+</template>

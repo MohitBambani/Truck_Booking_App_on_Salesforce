@@ -1,0 +1,21 @@
+<template>
+    <template if:true={truckLoads}>
+        <template for:each={truckLoads} for:item="truckLoad" >
+            <lightning-card key={truckLoad.Id} title={truckLoad.Name} icon-name="standard:default">
+                <lightning-record-view-form object-api-name="Truck_Load__c" record-id={truckLoad.Id}>
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Loaded_Items__c"></lightning-output-field>
+                    <lightning-output-field field-name="Maximum_Load_Capacity__c"></lightning-output-field>
+                    <lightning-output-field field-name="Goods_Loaded__c"></lightning-output-field>
+                </lightning-record-view-form>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:false={truckLoads}>
+        No loading records for this
+    </template>
+    <template if:true={error}>
+        <p>There is error</p>
+        {error}
+    </template>
+</template>

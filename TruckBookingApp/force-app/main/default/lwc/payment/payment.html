@@ -1,0 +1,10 @@
+<template>
+    <lightning-button style="width: 100%;" label={payment.Name} onclick={handleClick}></lightning-button>
+    <template if:true={showRecord}>
+        <lightning-card style="margin-bottom:20px;" title={payment.Name} icon-name="standard:default" key={payment.Id}>
+            <lightning-record-form   record-id={payment.Id} mode={mode}
+                            object-api-name="Truck_Booking_Payment__c" fields={fields} columns="2" onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </lightning-card>
+    </template>
+</template>

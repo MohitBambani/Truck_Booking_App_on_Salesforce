@@ -1,0 +1,6 @@
+<template>
+    <h1 class="head">Journey Completed Bookings</h1>
+    <template for:each={bookings.data} for:item="booking" >
+        <c-booking key={booking.Id} booking={booking} cust=true recordmode='readonly'></c-booking>
+    </template>
+</template>

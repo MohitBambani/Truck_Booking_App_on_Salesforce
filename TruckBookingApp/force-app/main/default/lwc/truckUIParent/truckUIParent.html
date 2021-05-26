@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid">
+    <lightning-layout multiple-rows=true class="slds-col slds-size_8-of-12 colorThis">
+    <template for:each={trucks.data} for:item="t">
+        <lightning-layout-item key={t.Id} >
+            <c-truck-u-i-child truck={t} oneventforbooking={doBooking}></c-truck-u-i-child>
+        </lightning-layout-item>
+    </template>
+    </lightning-layout>
+    <lightning-layout class="slds-col slds-size_1-of-12">
+        
+    </lightning-layout>
+        <lightning-layout class="slds-col slds-size_3-of-12 colorThis">
+            <c-truck-booking-form></c-truck-booking-form>
+        </lightning-layout>
+    
+    </div>
+</template>

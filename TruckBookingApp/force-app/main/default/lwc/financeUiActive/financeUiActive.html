@@ -1,0 +1,8 @@
+<template>
+    <h1 class="head">Pending Payments</h1>
+        <template for:each={payments} for:item="payment">
+            <div key={payment.Id}>
+                <c-payment key={payment.Id}  payment={payment}></c-payment>
+            </div>
+        </template>
+</template>

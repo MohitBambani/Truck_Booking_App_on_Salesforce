@@ -1,0 +1,23 @@
+.child_ui{
+
+    background-color: rgb(146, 177, 206);
+    margin-left:20px; 
+    margin-bottom:25px; 
+    margin-top:20px;
+    width:220px; height:280px; 
+    border-radius:10px;
+    border:1px solid blue;
+
+}
+.child_ui:hover{
+    background-color:rgb(17, 3, 95);
+}
+
+.spanColorGreen{
+    background-color: green;
+    border-radius: 5px;
+}
+.spanColorRed{
+    background-color:red;
+    border-radius: 5px;
+}

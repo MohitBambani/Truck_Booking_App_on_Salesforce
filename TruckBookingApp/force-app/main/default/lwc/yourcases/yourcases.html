@@ -1,0 +1,10 @@
+<template>
+    <h1 class="head">These are your cases....</h1>
+    <template for:each={cases.data} for:item="casse">
+        <lightning-card key={casse.Id} title={casse.CaseNumber} icon-name="standard:default">
+            <lightning-record-form  record-id={casse.Id} object-api-name="Case" fields={fields} mode="readonly">
+
+            </lightning-record-form>
+        </lightning-card>  
+    </template>
+</template>

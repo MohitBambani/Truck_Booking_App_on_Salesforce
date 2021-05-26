@@ -1,0 +1,8 @@
+<template>
+    <h1 class="head">Completed Payments</h1>
+        <template for:each={payments} for:item="payment">
+            <div key={payment.Id}>
+                <c-payment  payment={payment} mode='readonly'></c-payment>
+            </div>
+        </template>
+</template>
